@@ -6,7 +6,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "kubectl auth can-i get pods"
+      shell: "kubectl auth can-i list pods && kubectl auth can-i list pods -n awx"
       register: "output"
 
     - debug: var=output.stdout_lines
