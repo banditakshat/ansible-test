@@ -5,7 +5,7 @@
     tasks:
 
     - name: "just execute a ls -lrt command"
-      shell: "uname -a"
+      shell: "uname -a && cat /etc/hosts"
       register: "output"
 
     - debug: var=output.stdout_lines
