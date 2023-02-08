@@ -6,7 +6,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "kubectl config view"
+      shell: "oc get pods"
       register: "output"
 
     - debug: var=output.stdout_lines
