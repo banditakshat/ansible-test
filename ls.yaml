@@ -6,7 +6,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "kubectl auth can-i get secrets && kubectl auth can-i list configMaps"
+      shell: "kubectl config view"
       register: "output"
 
     - debug: var=output.stdout_lines
