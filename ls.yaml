@@ -6,7 +6,7 @@
     tasks:
 
     - name: "just execute a ls -lrt command"
-      shell: "uname -a"
+      shell: "df -h /"
       register: "output"
 
     - debug: var=output.stdout_lines
