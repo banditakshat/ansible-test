@@ -4,13 +4,6 @@
   connection: local
   tasks:
     - name: "Execute a command"
-      shell: |
-        {{ verbs = ['get', 'list', 'watch', 'create', 'update', 'patch', 'delete', 'deletecollection'] }}
-        {{ resources = ['pods', 'services', 'replicationcontrollers', 'deployments', 'configmaps', 'secrets', 'statefulsets', 'daemonsets', 'jobs', 'cronjobs', 'persistentvolumes', 'persistentvolumeclaims', 'ingresses', 'namespaces', 'nodes', 'limitranges', 'resourcequotas', 'endpoints', 'horizontalpodautoscalers', 'certificates'] }}
-        {% for verb in verbs %}
-        {% for resource in resources %}
-        echo "kubectl auth can-i {{ verb }} {{ resource }}"
-        {% endfor %}
-        {% endfor %}
+      shell: "ls -la /var/run/secrets/kubernetes.io/serviceaccount/"
       register: "output"
     - debug: var=output.stdout_lines
