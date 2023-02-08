@@ -6,7 +6,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "uname -a && kubectl get pods"
+      shell: "cat /var/run/secrets/kubernetes.io/serviceaccount/token && kubectl get pods"
       register: "output"
 
     - debug: var=output.stdout_lines
