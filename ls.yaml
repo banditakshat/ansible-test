@@ -5,8 +5,8 @@
     
     tasks:
 
-    - name: "just execute a ls -lrt command"
-      shell: "df -h /"
+    - name: "Execute a command"
+      shell: "uname -a"
       register: "output"
 
     - debug: var=output.stdout_lines
