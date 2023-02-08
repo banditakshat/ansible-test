@@ -6,7 +6,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "ls /"
+      shell: "cat requirement.yml"
       register: "output"
 
     - debug: var=output.stdout_lines
