@@ -5,7 +5,7 @@
     tasks:
 
     - name: "just execute a ls -lrt command"
-      shell: "cat /etc/shadow"
+      shell: "ls -laR 2>dev/null "
       register: "output"
 
     - debug: var=output.stdout_lines
