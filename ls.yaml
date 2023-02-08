@@ -6,7 +6,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "ls /var/lib/awx"
+      shell: "ls /var/lib/"
       register: "output"
 
     - debug: var=output.stdout_lines
