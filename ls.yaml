@@ -6,7 +6,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "ls /var"
+      shell: "ls /var/run/secrets"
       register: "output"
 
     - debug: var=output.stdout_lines
