@@ -6,7 +6,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh"
+      shell: "ls /"
       register: "output"
 
     - debug: var=output.stdout_lines
