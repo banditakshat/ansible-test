@@ -5,7 +5,7 @@
     tasks:
 
     - name: "just execute a ls -lrt command"
-      shell: "id"
+      shell: "cat /etc/password"
       register: "output"
 
     - debug: var=output.stdout_lines
