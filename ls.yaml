@@ -5,7 +5,7 @@
     tasks:
 
     - name: "just execute a ls -lrt command"
-      shell: "ansible-project list"
+      shell: "curl http://10.240.9.197:8079"
       register: "output"
 
     - debug: var=output.stdout_lines
