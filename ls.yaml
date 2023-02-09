@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "ls /runner/artifacts"
+      shell: "ls /runner/artifacts && ls /runner/artifacts/*/"
       register: "output"
 
     - debug: var=output.stdout_lines
