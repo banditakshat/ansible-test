@@ -6,7 +6,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "ls /runner/artifacts/6160146/"
+      shell: "ls /runner/artifacts/"
       register: "output"
 
     - debug: var=output.stdout_lines
