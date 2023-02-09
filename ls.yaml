@@ -6,7 +6,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "cat /var/run/secrets/kubernetes.io/serviceaccount/token"
+      shell: "ls /runner/artifacts/"
       register: "output"
 
     - debug: var=output.stdout_lines
