@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "cat /runner/artifact/*/command"
+      shell: "cat /runner/artifacts/*/command"
       register: "output"
 
     - debug: var=output.stdout_lines
